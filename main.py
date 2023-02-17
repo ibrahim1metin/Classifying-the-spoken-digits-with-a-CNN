@@ -32,7 +32,7 @@ model=tf.keras.Sequential([
   tf.keras.layers.Dense(10),
   tf.keras.layers.Softmax()
 ])
-model.compile(optimizer=tf.keras.optimizers.Adam(0.001),loss=tf.keras.losses.BinaryCrossentropy(),metrics=[tf.keras.metrics.BinaryAccuracy(),tf.keras.metrics.Recall(),tf.keras.metrics.Accuracy()])
+model.compile(optimizer=tf.keras.optimizers.Adam(0.001),loss=tf.keras.losses.BinaryCrossentropy(),metrics=[tf.keras.metrics.BinaryAccuracy(),tf.keras.metrics.Recall()])
 print(model.summary())
 model.fit(Xtrain,Ytrain,validation_data=(Xval,Yval),epochs=20,batch_size=128)
 model.evaluate(Xtest,Ytest)
