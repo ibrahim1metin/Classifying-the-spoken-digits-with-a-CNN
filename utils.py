@@ -3,8 +3,8 @@ import random
 import numpy as np
 def TrainTestValSplit(X,Y,testRate,ValRate):
     assert testRate+ValRate<1.
-    testsize=X.shape[0]*testRate
-    valsize=X.shape[0]*ValRate
+    testsize=int(X.shape[0]*testRate)
+    valsize=int(X.shape[0]*ValRate)
     maxLength=X.shape[0]
     totalIndexes=list(range(maxLength))
     Xtrain=[]
